@@ -1,0 +1,152 @@
+body {
+  background-color: #dfdfdf;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  background-image: url(images/header-background-separator.png);
+  background-position-x: calc(50vw - 960px);
+  background-position-y: 0px;
+  background-size: 1920px 1129px;
+  background-repeat: no-repeat;
+
+  padding-bottom: 160px;
+}
+
+.header-container {
+  width: 1180px;
+  display: flex;
+  margin:auto;
+  padding-top: 36px;
+}
+
+.header-image {
+  width: 431px;
+  height: 431px;
+  margin-right: 144px;
+}
+
+.header-logo {
+  width: 589px;
+  height: 87px;
+  margin-top: 85px;
+}
+
+.header-slogan {
+  color: #f7931e;
+  font-size: 33.5px;
+  text-align: center;
+  margin-top: 42px;
+}
+
+.header-description {
+  color: #ffffff;
+  font-size: 21.5px;
+  font-weight: 300;
+  text-align:center;
+  margin-top: 42px;
+}
+
+.course-promo{
+  margin-top: -60px;
+}
+
+.course-promo .heading-1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #f77e16;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.course-promo .heading-2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #112128;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.course-promo .release-date {
+  display: flex;
+  color: #112128;
+  justify-content: center;
+  align-items: center;
+  font-size: 33.5px;
+  margin-bottom: 25px;
+}
+
+.course-promo .release-date img {
+  width: 85px;
+  height: 81px;
+  margin-right: 22px;
+}
+
+.course-promo .countdown {
+  margin: auto;
+  width: 716px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 12.1px 0.9px rgba(0, 0, 0, 0.39);
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  padding-top: 21px;
+  padding-bottom: 12px;
+}
+
+.course-promo .countdown .heading {
+  font-size: 25.5px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.course-promo .countdown .clock {
+  font-size: 84.5px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-promo .countdown .clock .time {
+  line-height: 84.5px;
+}
+
+.course-promo .countdown .clock .time + .time {
+  margin-left: 35px;
+}
+
+.course-promo .countdown .clock .subtext {
+  font-size: 33.5px;
+  margin-top: 10px;
+  font-weight: normal;
+  line-height: 33.5px;
+}
+
+.course-promo .countdown .small {
+  margin-top: 15px;
+  font-size: 20.5px;
+}
+
+.apply-for-course {
+  color: #ffffff;
+  background-color: #ff9331;
+  box-shadow: 0px 1px 12.1px 0.9px rgba(0, 0, 0, 0.39);
+  border-radius: 10px;
+  height: 35px;
+  width: 230px;
+  margin: 50px auto 0 auto;
+  font-size: 21.5px;
+  font-weight: 600px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+
+.footer{
+  height: 500px;
+}

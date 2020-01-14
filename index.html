@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HackBulgaria</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-container">
+      <img src="images/header-image.png" alt="header image" class="header-image" />
+      <div>
+        <img src="images/logo.png" alt="logo" class="header-logo" />
+        <div class="header-slogan">Think. Code. Test. Deploy.</div>
+        <div class="header-description">
+          Школа по програмиране, в която всеки пише код,<br/>
+          а лекциите преглежда за домашно!
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="course-promo">
+    <div class="heading-1">
+      Предстоящи курсове:
+    </div>
+    <div class="heading-2">
+      "Programming with Python 101"
+    </div>
+    <div class="release-date">
+      <img src="images/promo-calendar.png" alt="calendar icon" />
+      Курсът започва на 24.02.2020
+    </div>
+    <div class="countdown">
+      <div class="heading">Остават:</div>
+      <div class="clock">
+        <span class="time">
+          <div class="days">-</div>
+          <div class="subtext">дни</div>
+        </span>
+        <span class="time">
+          <div class="hours">-</div>
+          <div class="subtext">часа</div>
+        </span>
+        <span class="time">
+          <div class="minutes">-</div>
+          <div class="subtext">минути</div>
+        </span>
+        <span class="time">
+          <div class="seconds">-</div>
+          <div class="subtext">секунди</div>
+        </span>
+      </div>
+      <div class="small">до края на записването</div>
+    </div>
+  </div>
+
+  <div class="apply-for-course">
+    Кандидатствай
+  </div>
+
+
+  <div class="footer">
+    Footer
+  </div>
+
+</body>
+  <script type="text/javascript">
+    var daysElement = document.getElementsByClassName("days")[0];
+    var hoursElement = document.getElementsByClassName("hours")[0];
+    var minutesElement = document.getElementsByClassName("minutes")[0];
+    var secondsElement = document.getElementsByClassName("seconds")[0];
+    
+    // 01/02/2020
+    var deadline = new Date(2020, 1, 1);
+
+    function updateTheDate() {
+      const now = new Date()
+      
+      var days = parseInt((deadline - now) / 1000 / 60 / 60 / 24);
+      var hours = parseInt(((deadline - now) / 1000 / 60 / 60) - (days * 24));
+      var minutes = parseInt(((deadline - now) / 1000 / 60) - (days * 24 * 60) - (hours * 60));
+      var seconds = parseInt((deadline - now) / 1000 - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60));
+
+
+      if (days < 10) {
+        days = "0" + days;
+      }
+
+      if (hours < 10) {
+        hours = "0" + hours;
+      }
+
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
+
+      daysElement.innerHTML = days;
+      hoursElement.innerHTML = hours;
+      minutesElement.innerHTML = minutes;
+      secondsElement.innerHTML = seconds;
+    }
+
+    setInterval('updateTheDate()', 1000);
+  </script>
+</html>
