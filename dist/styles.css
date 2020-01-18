@@ -4,6 +4,12 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .header {
   background-image: url(images/header-background-separator.png);
   background-position-x: calc(50vw - 960px);
@@ -35,14 +41,14 @@ body {
 
 .header-slogan {
   color: #f7931e;
-  font-size: 33.5px;
+  font-size: 33px;
   text-align: center;
   margin-top: 42px;
 }
 
 .header-description {
   color: #ffffff;
-  font-size: 21.5px;
+  font-size: 21px;
   font-weight: 300;
   text-align:center;
   margin-top: 42px;
@@ -73,7 +79,7 @@ body {
   color: #112128;
   justify-content: center;
   align-items: center;
-  font-size: 33.5px;
+  font-size: 33px;
   margin-bottom: 25px;
 }
 
@@ -87,7 +93,7 @@ body {
   margin: auto;
   width: 716px;
   border-radius: 10px;
-  box-shadow: 0px 1px 12.1px 0.9px rgba(0, 0, 0, 0.39);
+  box-shadow: 0px 1px 12px 1px rgba(0, 0, 0, 0.4);
   background-color: rgba(255, 255, 255, 0.3);
   text-align: center;
   padding-top: 21px;
@@ -95,13 +101,13 @@ body {
 }
 
 .course-promo .countdown .heading {
-  font-size: 25.5px;
+  font-size: 25px;
   font-weight: 600;
   margin-bottom: 25px;
 }
 
 .course-promo .countdown .clock {
-  font-size: 84.5px;
+  font-size: 84px;
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -109,7 +115,7 @@ body {
 }
 
 .course-promo .countdown .clock .time {
-  line-height: 84.5px;
+  line-height: 84px;
 }
 
 .course-promo .countdown .clock .time + .time {
@@ -117,26 +123,26 @@ body {
 }
 
 .course-promo .countdown .clock .subtext {
-  font-size: 33.5px;
+  font-size: 33px;
   margin-top: 10px;
   font-weight: normal;
-  line-height: 33.5px;
+  line-height: 33px;
 }
 
 .course-promo .countdown .small {
   margin-top: 15px;
-  font-size: 20.5px;
+  font-size: 20px;
 }
 
 .apply-for-course {
   color: #ffffff;
   background-color: #ff9331;
-  box-shadow: 0px 1px 12.1px 0.9px rgba(0, 0, 0, 0.39);
+  box-shadow: 0px 1px 12px 1px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   height: 35px;
   width: 230px;
-  margin: 50px auto 0 auto;
-  font-size: 21.5px;
+  margin: 50px auto 10px; auto;
+  font-size: 21px;
   font-weight: 600px;
 
   display: flex;
@@ -146,6 +152,161 @@ body {
   cursor: pointer;
 }
 
+.course-description {
+  position: relative;
+  background-color: #112128;
+}
+.background-container-light {
+  position: absolute;
+  background-color: #dfdfdf;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200px;
+}
+.course-description .background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 600px;
+  background-image: url(images/background-separator2.png);
+  background-repeat: no-repeat;
+  background-position-x: calc(50vw - 960px);
+  background-position-y: -300px;
+  background-size: 1920px 1080px;
+}
+
+.course-description > .heading {
+  padding-top: 300px;
+  font-weight: bold;
+  font-size: 50px;
+  color: #dfdfdf;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+
+.course-description .description {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  margin-top: 70px;
+}
+.course-description .description .info {
+  margin-right: 192px;
+  max-width: 460px;
+}
+
+.course-description .description .info .heading {
+  color: #f77e16;
+  font-size: 40px;
+}
+
+.course-description .description .info .content {
+  color: #dfdfdf;
+  font-size: 21px;
+}
+
+.course-description .description .image {
+  width:  520px;
+  height: 301px;
+  border: 1px solid black;
+}
+
+.course-description .arrow-after-description {
+  display: flex;
+  justify-content: center;
+  height: 117px;
+  overflow: visible;
+}
+
+.course-description .arrow-after-description img {
+  width: 143px;
+  height: 125px;
+  margin-right: 150px;
+}
+
+.course-description .whoisthisfor {
+  display: flex;
+}
+
+.course-description .whoisthisfor .image img {
+  width: 405px;
+  height: 320px;
+  margin-left: 32px;
+  margin-right: 175px;
+}
+
+.course-description .whoisthisfor .info {
+  max-width: 540px;
+  text-align: right;
+}
+
+.course-description .whoisthisfor .info .heading {
+  color: #f77e16;
+  font-size: 40px;
+  margin-bottom: 33px;
+}
+
+.course-description .whoisthisfor .info .content {
+  color: #dfdfdf;
+  font-size: 21.5px;
+  font-weight: 300;
+}
+
+.course-description .arrow-after-whoisthisfor {
+  display: flex;
+  justify-content: center;
+  height: 63px;
+  overflow: visible;
+}
+
+.course-description .arrow-after-whoisthisfor img {
+  width: 141px;
+  height: 118px;
+  margin-left: 100px;
+}
+
+.course-description .requirements {
+  display: flex;
+}
+
+.course-description .requirements .info {
+  max-width: 555px;
+  margin-right: 100px;
+}
+
+.course-description .requirements .info .heading {
+  font-size: 39px;
+  color: #f77e16;
+}
+
+.course-description .requirements .info .content {
+  font-size: 21px;
+  font-weight: 300;
+  color: #dfdfdf;
+}
+
+.course-description .requirements .image img {
+  width: auto;
+  height: 400px;
+}
+
+.course-description .arrow-after-requirements {
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  height: 165px;
+}
+
+.course-description .arrow-after-requirements img {
+  width: 143px;
+  height: 125px;
+  margin-right: 250px;
+}
 
 .footer{
   height: 500px;
