@@ -702,7 +702,7 @@ body {
   background-size: 1920px 1129px;
   background-repeat: no-repeat;
 
-  height: 500px;
+  height: 350px;
   padding-top: 200px;
 }
 
@@ -713,8 +713,9 @@ body {
 }
 
 .footer .info {
-  font-size: 23px;
+  font-size: 20px;
   color: #dfdfdf;
+  height: 70px;
 }
 
 .footer .info .heading {
@@ -728,11 +729,11 @@ body {
 .footer .powered-by {
   display: flex;
   align-items: center;
-  font-size: 25px;
+  font-size: 20px;
   color: #dfdfdf;
 }
 
 .footer .powered-by img {
-  width: 230px;
+  width: 170px;
   padding-top: 5px;
 }
