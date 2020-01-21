@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'AnonymousPro-Bold';
+  src: url('fonts/Anonymous_Pro_B.ttf') format('opentype');
+}
+
 body {
   background-color: #dfdfdf;
   margin: 0;
@@ -72,10 +77,10 @@ body {
 
 .course-promo .heading-2 {
   font-size: 50px;
-  font-weight: 700;
   color: #112128;
   text-align: center;
   margin-bottom: 35px;
+  font-family: 'AnonymousPro-Bold';
 }
 
 .course-promo .release-date {
@@ -148,6 +153,7 @@ body {
   margin: 50px auto 10px; auto;
   font-size: 21px;
   font-weight: 600px;
+  text-decoration: none;
 
   display: flex;
   justify-content: center;
@@ -184,12 +190,12 @@ body {
 
 .course-description > .heading {
   padding-top: 300px;
-  font-weight: bold;
   font-size: 50px;
   color: #dfdfdf;
   text-align: center;
   position: relative;
   z-index: 1;
+  font-family: 'AnonymousPro-Bold'
 }
 
 
@@ -212,6 +218,11 @@ body {
 .course-description > .container > .description .info .content {
   color: #dfdfdf;
   font-size: 21px;
+}
+
+.course-description > .container > .description .info .content a {
+  color: #f77e16;
+  text-decoration: none;
 }
 
 .course-description > .container > .description .image {
