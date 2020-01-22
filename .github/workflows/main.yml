@@ -19,3 +19,6 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'eu-central-1' 
         SOURCE_DIR: 'dist'
+    - name: Invalidated CloudFront
+      run: aws configure set preview.cloudfront true
+      run: aws cloudfront create-invalidation --distribution-id=${{ secrets.DISTRIBUTION_ID }} --paths "/*"
