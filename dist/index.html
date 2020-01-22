@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156591051-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-156591051-1');
+  </script>
   <title>HackBulgaria</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" href="images/hackman.png">
+  <!-- Facebook Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+   fbq('init', '509518335896450'); 
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+   <img height="1" width="1" 
+  src="https://www.facebook.com/tr?id=509518335896450&ev=PageView
+  &noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,7 +42,6 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-TSZ78WV');</script>
   <!-- End Google Tag Manager -->
-  <link rel="icon" href="images/hackman.png">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -41,7 +69,7 @@
       Предстоящи курсове:
     </div>
     <div class="heading-2">
-      "Programming with Python 101"
+      "Programming 101 with Python"
     </div>
     <div class="release-date">
       <img src="images/promo-calendar.png" alt="calendar icon" />
@@ -92,7 +120,7 @@
           <div class="content">
             <ul>
               <li>
-                Обучението ще се проведе в нашата зала, която се намира на <b>ул. Ресен, бл. 555</b><br/>
+                Обучението ще се проведе в нашата зала, която се намира в <b>град София, ж.к. Младост 1А, ул. Ресен, бл. 555</b><br/>
                 <b><a href="https://goo.gl/maps/bwBXCjWGy8z8TUAs8" target="_blank">(виж на картата)</a></b>
               </li>
               <li>
@@ -100,6 +128,8 @@
               </li>
               <li>
                 Броят занятия на седмица се редуват както следва: 2 пъти, 3 пъти, 2 пъти, 3 пъти през седмица и т.н. <br/>
+              </li>
+              <li>
                 Занятията траят по 4 часа.
               </li>
             </ul>
@@ -192,7 +222,8 @@
             Имплементиране на client-server приложения<br/>
             Разбиране как приложенията могат да комуникират<br/> 
             помежду си - с протоколи и формати.<br/>
-            JSON, HTTP, опашки за съобщения.<br/>
+            Design patterns<br/>
+            Структури от данни<br/>
             Защита на нашите приложения от уязвимости.<br/>
             Много работа в екип.<br/>
             <br/>
@@ -264,15 +295,14 @@
                 Мартин Ангелов
               </div>
               <div class="bio">
-                * Full-stack developer @ HackSoft<br/>
-                * 3+ years of experience with Python & JavaScript<br/>
-                * Bachelor degree in "Software engineering" - Sofia University<br/>
-                * Lecturer in the past 3 editions of Python 101 courses<br/>
-                * Speaker @ EuroPython, @ DjangoCon Europe, @ Python Belgarde'<br/>
-                   meetup and    Django Bulgaria's meetups<br/>
-                * Mentor @ Django Girls programming workshops<br/>
-                * Author of dev blog posts<br/>
-                * Proud HackBulgaria alumni<br/>
+                * Full-stack developer в HackSoft<br/>
+                * 3-годишен опит с езиците Python & JavaScript<br/>
+                * Завършил "Софтуерно инженерство" в Софийски университет<br/>
+                * Преподавател по Python 101 от 3 години в курсовете на HackBulgaria<br/>
+                * Лектор на EuroPython, DjangoCon Europe, Python Belgarde' meetup и Django Bulgaria's meetups<br/>
+                * Ментор на Django Girls programming workshops<br/>
+                * Автор на блог статии за софтуерна разработка<br/>
+                * Горд представител на HackBulgaria алумни групата<br/>
               </div>
             </div>
             <div class="right-side-placeholder">
@@ -291,27 +321,25 @@
       </div>
       <div class="content">
         <div class="partner partner1">
-          <!-- TODO: Fix logo height -->
-          <img src="images/hacksoft-logo.png" alt="Partner placeholder" />
+          <a href="https://www.hacksoft.io/" target="_blank">
+            <img src="images/hacksoft-logo.png" alt="HackSoft logo" />
+          </a>
         </div>
 
         <div class="partner partner2">
-          <div class="placeholder">
-            ? ? ?
-          </div>
-          <div class="coming-soon-text">
-            Coming soon
-          </div>
+          <a href="https://www.hedgeserv.com/" target="_blank">
+            <img src="images/hedgeserv-logo.png" alt="Hedge Serv logo" />
+          </a>
         </div>
 
-        <div class="partner partner3">
+        <!--<div class="partner partner3">
           <div class="placeholder">
             ? ? ?
           </div>
           <div class="coming-soon-text">
             Coming soon
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
@@ -335,7 +363,9 @@
       </div>
       <div class="content">
         <img src="images/logo.png" alt="HackBulgaria logo" class="logo" />
-        <img src="images/past-courses-feedback.png" alt="Past courses collage" class="collage" />
+        <a href="https://www.facebook.com/pg/HackBulgaria/photos/?tab=album&album_id=987262321323200" target="_blank">
+          <img src="images/past-courses-feedback.png" alt="Past courses collage" class="collage" />
+        </a>
         <div class="people-counter-container">
           <img src="images/past-courses-feedback-left-image.png" alt="" class="past-courses-feedback-left-image" />
           <div class="past-courses-counter-element">
