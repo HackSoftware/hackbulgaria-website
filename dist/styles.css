@@ -854,17 +854,22 @@ body {
 .partners .content .partner.partner1 {
   grid-area: partner1;
 }
+.partners .content .partner.partner1 img {
+  width: auto;
+  height: 65px;
+}
 
 .partners .content .partner.partner2 {
   grid-area: partner2;
 }
 
-.partners .content .partner.partner3 {
-  grid-area: partner3;
+.partners .content .partner.partner2 img {
+  width: auto;
+  height: 75px;
 }
 
-.partners .content .partner img {
-  width: 170px;
+.partners .content .partner.partner3 {
+  grid-area: partner3;
 }
 
 .partners .content .partner:before {
