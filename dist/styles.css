@@ -923,6 +923,12 @@ body {
   .partners .content {
     grid-template-areas: 'partner1' 'partner2' 'partner3';
   }
+  .partners .content .partner.partner1 img {
+    height: 40px;
+  }
+  .partners .content .partner.partner2 img {
+    height: 50px;
+  }
 }
 
 .past-courses {
