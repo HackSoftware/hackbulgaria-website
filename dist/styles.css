@@ -3,9 +3,13 @@
   src: url('fonts/Anonymous_Pro_B.ttf') format('opentype');
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #dfdfdf;
-  margin: 0;
+  margin: 0 0 70px 0; /* leaving space at the bottom for the navigation */
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -28,6 +32,45 @@ body {
   .container img {
     max-width: 100%;
   }
+}
+
+.navigationWrapper {
+  width: 100%;
+  height: 70px;
+
+  bottom: 0;
+  z-index: 3;
+  position: fixed;
+
+  background-color: black;
+  box-shadow: 0 0 12.1px 0.9px rgba(0, 0, 0, 0.4);
+}
+
+.navigationWrapper > .navigation {
+  font-size: 21.5px;
+  font-weight: 600;
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navigationWrapper > .navigation > a {
+  color: #f7931e;
+  text-decoration: none;
+}
+
+.navigationWrapper > .navigation > .hackman {
+  width: 42px;
+  height: 64px;
+  margin-top: -18px;
+  align-self: flex-start;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('images/hackman_fullheight.png');
 }
 
 .header {
@@ -56,6 +99,10 @@ body {
 }
 
 @media only screen and (max-width: 770px) {
+  .navigationWrapper > .navigation {
+    font-size: 12px;
+  }
+
   .header-image {
     display: none;
   }
@@ -269,7 +316,7 @@ body {
   position: absolute;
   background-color: #dfdfdf;
   left: 0;
-  top: 0;
+  top: -1px; /* sometimes a line from the background appears */
   width: 100%;
   height: 200px;
 }
