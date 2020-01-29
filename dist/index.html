@@ -26,11 +26,11 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window,document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-   fbq('init', '509518335896450'); 
+   fbq('init', '509518335896450');
   fbq('track', 'PageView');
   </script>
   <noscript>
-   <img height="1" width="1" 
+   <img height="1" width="1"
   src="https://www.facebook.com/tr?id=509518335896450&ev=PageView
   &noscript=1"/>
   </noscript>
@@ -53,7 +53,17 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <div class="header">
+  <div class="navigationWrapper">
+    <div class="navigation container">
+      <a href="#course-promo">Нови курсове</a>
+      <a href="#partners">Партньори</a>
+      <a href="#past-courses">Архив</a>
+      <a href="#about-us">За нас</a>
+      <a class="hackman" href="#header"></a>
+    </div>
+  </div>
+
+  <div class="header" id="header">
     <div class="header-container">
       <div class="header-image">
         <img src="images/header-image.png" alt="header image" />
@@ -68,7 +78,7 @@
       </div>
     </div>
   </div>
-  <div class="course-promo">
+  <div class="course-promo" id="course-promo">
     <div class="heading-1">
       Предстоящи курсове:
     </div>
@@ -124,8 +134,10 @@
           <div class="content">
             <ul>
               <li>
+                <span>
                 Обучението ще се проведе в нашата зала, която се намира в <b>град София, ж.к. Младост 1А, ул. Ресен, бл. 555</b><br/>
-                <b><a href="https://goo.gl/maps/bwBXCjWGy8z8TUAs8" target="_blank">(виж на картата)</a></b>
+                  <b><a href="https://goo.gl/maps/bwBXCjWGy8z8TUAs8" target="_blank">(виж на картата)</a></b>
+                  <span>
               </li>
               <li>
                 Продължителността на курса е 3 месеца.
@@ -218,17 +230,19 @@
             <br/>
             Програмата за курса включва:<br/>
             <br/>
-            Изучаване на Python като програмен език.<br/>
-            Работа с Linux базирана операционна система.<br/>
-            Unit testing.<br/>
-            Design patterns.<br/>
-            Структури от данни и алгоритми.<br/>
-            Работа с Git.<br/>
-            Работа с бази данни и ORM.<br/>
-            Имплементиране на client-server приложения.<br/>
-            Работа с HTTP, JSON и XML.<br/>
-            Securing our applications from common vulnerabilities.<br/>
-            Много работа в екип.<br/>
+            <ul>
+              <li>Изучаване на Python като програмен език.</li>
+              <li>Работа с Linux базирана операционна система.</li>
+              <li>Unit testing.</li>
+              <li>Design patterns.</li>
+              <li>Структури от данни и алгоритми.</li>
+              <li>Работа с Git.</li>
+              <li>Работа с бази данни и ORM.</li>
+              <li>Имплементиране на client-server приложения.</li>
+              <li>Работа с HTTP, JSON и XML.</li>
+              <li>Securing our applications from common vulnerabilities.</li>
+              <li>Много работа в екип.</li>
+            </ul>
             <br/>
             Детайлна програма за курса можете да видите в <a href="https://github.com/HackBulgaria/Programming-101-Python-2020-Spring" target="_blank">Github</a>. Материалите за<br/>
             този курс ще бъдат достъпни отново там.<br/>
@@ -248,14 +262,15 @@
           <br/>
           Какво включва процеса на кандидатстване?<br/>
           <br/>
-          Решаване на 3 задачи, поместени във формата за кандидатстване,<br/>
-          на език по избор.<br/>
+          <span><span class="checkbox"></span>Решаване на 3 задачи, поместени във формата за кандидатстване,<br/>
+            на език по избор.</span>
           <br/>
-          Провеждане на техническо интервю онлайн, с кандидатите решили<br/>
-          задачите.<br/>
           <br/>
-          Финален подбор на кандидатите (изпращаме e-mail до всеки,<br/>
-          независимо дали е приет, или не).<br/>
+          <span><span class="checkbox"></span>Провеждане на техническо интервю онлайн, с кандидатите решили<br/>
+          задачите.</span><br/>
+          <br/>
+          <span><span class="checkbox"></span>Финален подбор на кандидатите (изпращаме e-mail до всеки,<br/>
+          независимо дали е приет, или не).</span><br/>
         </div>
       </div>
       <a class="apply-for-course" href="https://forms.gle/GCeEuNiQHxTSJ3ub8" target="_blank">
@@ -278,7 +293,7 @@
               Ако вие вече работите, но желаете<br/>
               да придобриете или опресните<br/>
               своите знания, курсът за вас ще<br/>
-              бъде на стойност<br/> 
+              бъде на стойност<br/>
               <b>600лв</b> (с вкл. ДДС).<br/>
             </div>
           </div>
@@ -318,7 +333,7 @@
     <div class="background-container-end">
     </div>
   </div>
-  <div class="partners">
+  <div class="partners" id="partners">
     <div class="container">
       <div class="heading">
         Партньори:
@@ -348,8 +363,8 @@
     </div>
   </div>
 
-  <div class="past-courses">
-    <div class="container"> 
+  <div class="past-courses" id="past-courses">
+    <div class="container">
       <div class="heading">
         Минали курсове:
       </div>
@@ -384,8 +399,8 @@
       </div>
     </div>
   </div>
-  
-  <div class="about-us-section">
+
+  <div class="about-us-section" id="about-us">
     <div class="container">
       <div class="heading">
         За нас
@@ -401,7 +416,7 @@
         Организирали сме 15 такива обучения, благодарение на които 300 души са започнали своята първа работа след тях.<br/>
         <br/>
         <br/>
-        Курсовете ни за напреднали обикновено се фокусират върху дадена технология и са насочени към хора, които имат опит в бранша.<br/> 
+        Курсовете ни за напреднали обикновено се фокусират върху дадена технология и са насочени към хора, които имат опит в бранша.<br/>
         <br/>
         Повече за всички организирани от нас досега курсове можете да видите в <a href="https://github.com/HackBulgaria" target="_blank">GitHub.</a><br/>
         <br/>
@@ -443,14 +458,14 @@
     var hoursElement = document.getElementsByClassName("hours")[0];
     var minutesElement = document.getElementsByClassName("minutes")[0];
     var secondsElement = document.getElementsByClassName("seconds")[0];
-    
+
     // 12/02/2020
     // NOTE: Months begin at 0 but days begin at 1
     var deadline = new Date(2020, 1, 12);
 
     function updateTheDate() {
       const now = new Date()
-      
+
       var days = parseInt((deadline - now) / 1000 / 60 / 60 / 24);
       var hours = parseInt(((deadline - now) / 1000 / 60 / 60) - (days * 24));
       var minutes = parseInt(((deadline - now) / 1000 / 60) - (days * 24 * 60) - (hours * 60));
