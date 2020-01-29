@@ -306,13 +306,16 @@ body {
 }
 
 .course-description .content > ul > li:before {
-  margin-top: 5px;
-  margin-right: 10px;
   content: '';
-  min-width: 25px;
+
+  margin-top: 8px;
+  margin-right: 10px;
+
   height: 10px;
+  min-width: 25px;
+
   display: inline-block;
-  background: url('images/list-item-arrow.png');
+  background-image: url('images/list-item-arrow.png');
   background-size: cover;
 }
 
@@ -523,6 +526,18 @@ body {
 .course-description .course-application .content {
   font-size: 21px;
   color: #dfdfdf;
+}
+
+.course-description .course-application .content > span > .checkbox {
+  margin-right: 5px;
+  margin-bottom: -5px;
+
+  height: 25px;
+  min-width: 30px;
+  display: inline-block;
+
+  background-size: cover;
+  background-image: url('images/checkbox.png');
 }
 
 .course-description .course-price {
@@ -784,6 +799,10 @@ body {
   .course-description .course-application .content {
     font-size: 18px;
     margin-bottom: 30px;
+  }
+
+  .course-description .course-application .content > span {
+    display: flex;
   }
 
   .course-description .course-price {
