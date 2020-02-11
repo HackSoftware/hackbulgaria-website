@@ -189,61 +189,6 @@ body {
   margin-right: 22px;
 }
 
-.course-promo .qna-link {
-  color: #f7931e;
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 10px;
-  text-align: center;
-  margin-bottom: 25px;
-  text-decoration: none;
-}
-
-.course-promo .countdown {
-  margin: auto;
-  width: 716px;
-  border-radius: 10px;
-  box-shadow: 0px 1px 12px 1px rgba(0, 0, 0, 0.4);
-  background-color: rgba(255, 255, 255, 0.3);
-  text-align: center;
-  padding-top: 21px;
-  padding-bottom: 12px;
-}
-
-.course-promo .countdown .heading {
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 25px;
-}
-
-.course-promo .countdown .clock {
-  font-size: 84px;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.course-promo .countdown .clock .time {
-  line-height: 84px;
-}
-
-.course-promo .countdown .clock .time + .time {
-  margin-left: 35px;
-}
-
-.course-promo .countdown .clock .subtext {
-  font-size: 33px;
-  margin-top: 10px;
-  font-weight: normal;
-  line-height: 33px;
-}
-
-.course-promo .countdown .small {
-  margin-top: 15px;
-  font-size: 20px;
-}
-
 @media only screen and (max-width: 770px) {
   .course-promo {
     margin-top: 0;
@@ -264,32 +209,6 @@ body {
     width: 50px;
     height: auto;
   }
-  .course-promo .countdown {
-    width: 90%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .course-promo .countdown .heading {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  .course-promo .countdown .clock .time {
-    font-size: 40px;
-    line-height: 40px;
-  }
-  .course-promo .countdown .clock .time + .time {
-    margin-left: 20px;
-  }
-  .course-promo .countdown .clock .subtext.subtext {
-    font-size: 16px;
-    line-height: 16px;
-  }
-  .course-promo .countdown .small {
-    font-size: 16px;
-    margin-top: 10px;
-  }
 }
 
 .apply-for-course {
@@ -298,7 +217,7 @@ body {
   box-shadow: 0px 1px 12px 1px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   height: 35px;
-  width: 230px;
+  width: 424px;
   margin: 50px auto 10px;
   font-size: 21px;
   font-weight: 600;
@@ -345,8 +264,18 @@ body {
   background-size: 1920px 1080px;
 }
 
+.course-description > .heading-attachment {
+  color: #dfdfdf;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-family: 'AnonymousPro-Bold';
+  margin-bottom: 15px;
+  font-size: 25px;
+  padding-top: 280px;
+}
+
 .course-description > .heading {
-  padding-top: 300px;
   font-size: 50px;
   color: #dfdfdf;
   text-align: center;
@@ -1205,7 +1134,7 @@ body {
 }
 
 .about-us-section {
-  padding-bottom: 50px;
+  padding-bottom: 80px;
 }
 
 .about-us-section .heading {
@@ -1219,7 +1148,6 @@ body {
   font-size: 20px;
   font-weight: 300;
   color: #112128;
-  margin-bottom: 40px;
 }
 
 .about-us-section .content a {
@@ -1229,14 +1157,58 @@ body {
   font-weight: 700;
 }
 
-.about-us-section .hackconf-button {
-  color: #f77e16;
-  font-size: 20px;
-  padding: 8px 32px;
-  border-radius: 10px;
+.about-us-section .social-networks {
+  margin: 35px auto 0 auto;
+  height: 52px;
+  max-width: 442px;
+  display: flex;
   background-color: #112128;
   box-shadow: 0px 1px 12.1px 0.9px rgba(0, 0, 0, 0.39);
-  text-decoration: none;
+  border-radius: 9.4px;
+  display: flex;
+  align-items: center;
+  padding: 0 53px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.about-us-section .social-networks > a > img {
+  height: 40px;
+  width: 40px;
+}
+
+.initiatives .heading {
+  font-size: 44px;
+  font-weight: 600;
+  color: #f77e16;
+  margin-bottom: 33px;
+}
+
+.initiatives .content {
+  display: grid;
+  grid-gap: 45px;
+  justify-content: center;
+  grid-template-columns: repeat(3, 261px);
+}
+
+.initiatives .content a {
+  height: 140px;
+  width: 261px;
+  background-size: cover;
+  background-image: url(images/balloon.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f77e16;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+.initiatives .content a:first-of-type img {
+  height: 77px;
 }
 
 @media only screen and (max-width: 770px) {
@@ -1250,6 +1222,10 @@ body {
   .about-us-section .content {
     font-size: 18px;
     margin-bottom: 0;
+  }
+
+  .initiatives .content {
+    grid-template-columns: repeat(auto-fill, 261px);
   }
 }
 
@@ -1271,22 +1247,19 @@ body {
 }
 
 .footer .info {
-  font-size: 20px;
+  font-size: 23.5px;
   color: #dfdfdf;
+  max-width: 500px;
 }
 
-.footer .info .social-media {
-  display: flex;
-}
-.footer .info .social-media a {
-  padding-right: 20px;
+.footer .info .heading {
+  font-weight: 700;
 }
 
 .footer .info a {
-  font-weight: 700;
   text-decoration: none;
   color: #fff;
-  display: block;
+  white-space: nowrap;
 }
 
 .footer .powered-by {
