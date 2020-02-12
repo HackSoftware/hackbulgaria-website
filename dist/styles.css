@@ -1207,6 +1207,10 @@ body {
   box-sizing: border-box;
 }
 
+.initiatives .content a:nth-of-type(2) img {
+  margin-right: -15px;
+}
+
 .initiatives .content a:first-of-type img {
   height: 77px;
 }
@@ -1227,6 +1231,11 @@ body {
   .initiatives .content {
     grid-template-columns: repeat(auto-fill, 261px);
   }
+}
+
+.newsletter-form {
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 .footer {
