@@ -1,470 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156591051-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackBulgaria - Python 101</title>
 
-    gtag('config', 'UA-156591051-1');
-  </script>
-  <title>HackBulgaria</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="icon" href="images/hackman.png">
-  <!-- Facebook Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window,document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-   fbq('init', '509518335896450');
-  fbq('track', 'PageView');
-  </script>
-  <noscript>
-   <img height="1" width="1"
-  src="https://www.facebook.com/tr?id=509518335896450&ev=PageView
-  &noscript=1"/>
-  </noscript>
-  <!-- End Facebook Pixel Code -->
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-TSZ78WV');</script>
-  <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="index.css">
 
-  <meta property="og:title" content="Нов курс: Programming 101 with Python - издание 9" />
-  <meta property="og:description" content="Кандидатствай за практическия курс до 12 февруари" />
-  <meta property="og:image" content="https://www.hackbulgaria.com/images/og-cover.png" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            home();
+        })
+
+        function remove_active_button() {
+            $("header div.header-buttons button").each(function() {
+                $(this).removeClass("active");
+            });
+        }
+
+        function home() {
+            remove_active_button();
+            $("#main").load("pages/home.html");
+        }
+
+        function courses() {
+            remove_active_button();
+            $("header div.header-buttons button:nth-child(1)").addClass("active");
+            $("#main").load("pages/courses.html");
+        }
+
+        function upcoming() {
+            remove_active_button();
+            $("header div.header-buttons button:nth-child(2)").addClass("active");
+            $("#main").load("pages/upcoming.html");
+        }
+
+        function about_us() {
+            remove_active_button();
+            $("header div.header-buttons button:nth-child(3)").addClass("active");
+            $("#main").load("pages/about_us.html");
+        }
+
+        function testimonials() {
+            remove_active_button();
+            $("header div.header-buttons button:nth-child(4)").addClass("active");
+            $("#main").load("pages/testimonials.html");
+        }
+
+        function become_partner() {
+            remove_active_button();
+            $("header div.header-buttons button:nth-child(5)").addClass("active");
+            $("#main").load("pages/become_partner.html");
+        }
+    </script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSZ78WV"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <div class="navigationWrapper">
-    <div class="navigation container">
-      <a href="#course-promo">Нови курсове</a>
-      <a href="#partners">Партньори</a>
-      <a href="#past-courses">Архив</a>
-      <a href="#about-us">За нас</a>
-      <a class="hackman" href="#header"></a>
-    </div>
-  </div>
-
-  <div class="header" id="header">
-    <div class="header-container">
-      <div class="header-image">
-        <img src="images/header-image.png" alt="header image" />
-      </div>
-      <div class="header-logo-container">
-        <img src="images/logo.png" alt="logo" class="header-logo" />
-        <div class="header-slogan">Think. Code. Test. Deploy.</div>
-        <div class="header-description">
-          Школа по програмиране, в която всеки пише код,<br/>
-          а лекциите преглежда за домашно!
+    <header>
+        <div>
+            <a onclick="home()"><img class="hackbulgaria-logo" src="images/hackbulgaria.png" alt="HackBulgaria"></a>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="course-promo" id="course-promo">
-    <div class="heading-1">
-      Текущи курсове:
-    </div>
-    <div class="heading-2">
-      "Programming 101 with Python"
-    </div>
-    <div class="release-date">
-      <img src="images/promo-calendar.png" alt="calendar icon" />
-      Курсът започва на 24.02.2020
-    </div>
-    </div>
-  </div>
 
-  <a class="apply-for-course" href="#course-description">
-Научи повече
-  </a>
+        <div class="header-buttons">
+            <button class="header-button" onclick="courses()">Courses</button>
+            <button class="header-button" onclick="upcoming()">Upcoming courses</button>
+            <button class="header-button" onclick="about_us()">About us</button>
+            <button class="header-button" onclick="testimonials()">Testimonials</button>
+            <button class="header-button" onclick="become_partner()">Become a partner</button>
+        </div>
 
-  <div class="course-description">
-    <div class="background-container-light">
-    </div>
-    <div class="background-container" >
-    </div>
-    <div class="heading-attachment" id="course-description">Най-успешният ни курс до момента:</div>
-    <div class="heading" >
-      “Programming 101 with Python”
-    </div>
-    <div class="container">
-      <div class="description">
-        <div class="info">
-          <div class="heading">
-            Детайли
-          </div>
-          <div class="content">
+        <div class="header-part-of">
+            Part of <a href="https://hacksoft.io/" target="_blank"><img class="hacksoft-logo" src="images/hacksoft.png" alt="HackSoft"></a>
+        </div>
+    </header>
+
+    <div id="main"></div>
+
+    <footer>
+        <div class="footer-subscribe">
+            <p>Want to recieve information about the edition of the course,<br>subscribe to our newsletter!</p>
+            <div class="sub-input">
+                <p>Subscribe</p><input type="email" name="email"> <button type="submit">Send</button>
+            </div>
+        </div>
+
+        <div class="footer-socials">
             <ul>
-              <li>
-                <span>
-                Обучението ще се проведе в нашата зала, която се намира в <b>град София, ж.к. Младост 1А, ул. Ресен, бл. 555</b><br/>
-                  <b><a href="https://goo.gl/maps/bwBXCjWGy8z8TUAs8" target="_blank">(виж на картата)</a></b>
-                  <span>
-              </li>
-              <li>
-                Продължителността на курса е 3 месеца.
-              </li>
-              <li>
-                Броят занятия на седмица се редуват както следва: 2 пъти, 3 пъти, 2 пъти, 3 пъти през седмица и т.н. <br/>
-              </li>
-              <li>
-		Всеки понеделник, сряда и през седмица в петък от 17 до 21 часа.
-              </li>
+                <li>
+                    <a href="https://www.instagram.com/hackbulgaria" target="_blank"><img src="images/socials/instagram.png" alt="Instagram"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/HackBulgaria" target="_blank"><img src="images/socials/twitter.png" alt="Twitter"></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/HackBulgaria" target="_blank"><img src="images/socials/facebook.png" alt="Facebook"></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UClxooLdBT49Kp9_UC0l_7gQ" target="_blank"><img src="images/socials/youtube.png" alt="YouTube"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/hack-bulgaria/" target="_blank"><img src="images/socials/linkedIn.png" alt="LinkedIn"></a>
+                </li>
             </ul>
-          </div>
         </div>
-        <div class="image">
-          <img src="images/hackbulgariahall.jpg" alt="" />
-        </div>
-      </div>
-      <div class="arrow-after-description">
-        <img src="images/arrow-right-down.png" alt="" />
-      </div>
-      <div class="whoisthisfor">
-        <div class="image">
-          <img src="images/whoisthisfor.png" alt="" />
-        </div>
-        <div class="info">
-          <div class="heading">
-            За кого е този курс?
-          </div>
-          <div class="content">
-            Курсът <b>НЕ Е</b> подходящ за напълно начинаещи!<br/>
-            <br/>
-            <b>“Programming 101 with Python”</b> е за онези от вас,<br/>
-            които имат базовите познания по програмиране и<br/>
-            желаят <b>да започнат работа в ИТ сферата</b> като<br/>
-            стажанти или junior програмисти.
-          </div>
-        </div>
-      </div>
-      <div class="arrow-after-whoisthisfor">
-        <img src="images/arrow-left-down.png" alt="" />
-      </div>
-      <div class="requirements">
-        <div class="info">
-          <div class="heading">
-            Изисквания
-          </div>
-          <div class="content">
-            За този курс <b>не е нужно</b> да знаеш езика Python.<br/>
-            <br/>
-            Нужно е:<br/>
-            <br/>
-            <ul>
-              <li>
-                Да имаш базови познания по програмиране, без значение на какъв език<br/>
-              </li>
-              <li>
-                Да имаш познания за обектно-ориентирано програмиране и основни структури от данни<br/>
-              </li>
-              <li>
-                Да разбираш английски (материалите за курса са на английски език)<br/>
-              </li>
-              <li>
-                Да имаш желание и да вложиш нужното постоянство.<br/>
-              </li>
-            </ul>
-            <br/>
-            <br/>
-            Обучението <b>изисква носенето на личен лаптоп</b> за занятията.<br/>
-          </div>
-        </div>
-        <div class="image">
-          <img src="images/requirements.png" alt="" />
-        </div>
-      </div>
-      <div class="arrow-after-requirements">
-        <img src="images/arrow-right-down.png" alt="" />
-      </div>
-      <div class="course-program">
-        <div class="image">
-          <img src="images/course-program.png" alt="" />
-        </div>
-        <div class="info">
-          <div class="heading">
-            Програма на курса
-          </div>
-          <div class="content">
-            Обучението е практическо и интензивно - по време на него ще се<br/>
-            разгледат и упражнят основни практики за софтуерна разработка,<br/>
-            използвайки езика Python.<br/>
-            <br/>
-            Програмата за курса включва:<br/>
-            <br/>
-            <ul>
-              <li>Изучаване на Python като програмен език.</li>
-              <li>Работа с Linux базирана операционна система.</li>
-              <li>Unit testing.</li>
-              <li>Design patterns.</li>
-              <li>Структури от данни и алгоритми.</li>
-              <li>Работа с Git.</li>
-              <li>Работа с бази данни и ORM.</li>
-              <li>Имплементиране на client-server приложения.</li>
-              <li>Работа с HTTP, JSON и XML.</li>
-              <li>Securing our applications from common vulnerabilities.</li>
-              <li>Много работа в екип.</li>
-            </ul>
-            <br/>
-            Детайлна програма за курса можете да видите в <a href="https://github.com/HackBulgaria/Programming-101-Python-2020-Spring" target="_blank">Github</a>. Материалите за<br/>
-            този курс ще бъдат достъпни отново там.<br/>
-          </div>
-        </div>
-      </div>
-      <div class="arrow-after-course-program">
-        <img src="images/arrow-left-down.png" alt="" />
-      </div>
-      <div class="course-application">
-        <div class="heading">
-          Кандидатстване
-        </div>
-        <div class="content">
-          Курсът има селекционен процес, след който ще бъдат одобрени 25 курсисти, които да<br/>
-          започнат обучението.<br/>
-          <br/>
-          Какво включва процеса на кандидатстване?<br/>
-          <br/>
-          <span><span class="checkbox"></span>Решаване на 3 задачи, поместени във формата за кандидатстване,<br/>
-            на език по избор.</span>
-          <br/>
-          <br/>
-          <span><span class="checkbox"></span>Провеждане на техническо интервю онлайн, с кандидатите решили<br/>
-          задачите.</span><br/>
-          <br/>
-          <span><span class="checkbox"></span>Финален подбор на кандидатите (изпращаме e-mail до всеки,<br/>
-          независимо дали е приет, или не).</span><br/>
-        </div>
-      </div>
-      <a class="apply-for-course" href="https://forms.gle/GCeEuNiQHxTSJ3ub8" target="_blank">
-        Кандидатствай
-      </a>
-      <div class="course-price">
-        <div class="heading">
-          Цена на курса
-        </div>
-        <div class="content">
-          <div class="for-students">
-            <div>
-              Обучението е напълно<br/>
-              <b>безплатно</b> за студенти,<br/>
-              които <b>не</b> работят.
+
+        <div class="footer-links">
+            <div class="links">
+                <ul>
+                    <li>Legal</li>
+                    <li><a href="mailto:team@hackbulgaria.com">Contact us</a></li>
+                    <li><a href="http://" target="_blank">Terms of Service & Privacy</a></li>
+                    <li><a href="http://" target="_blank">Policy</a></li>
+                    <li><a href="https://drive.google.com/file/d/1LFxVKAymdGr4FKc8q5J0d_HIC95DQKbq/view?usp=sharing" target="_blank">How we use cookies</a></li>
+                </ul>
+                <ul>
+                    <li>Connect</li>
+                    <li><a href="https://www.instagram.com/hackbulgaria" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/channel/UClxooLdBT49Kp9_UC0l_7gQ" target="_blank">YouTube</a></li>
+                    <li><a href="https://www.facebook.com/HackBulgaria" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com/HackBulgaria" target="_blank">Twitter</a></li>
+                </ul>
+                <ul>
+                    <li>Help</li>
+                    <li><a href="http://" target="_blank">FAQ</a></li>
+                    <li><a href="mailto:team@hackbulgaria.com">Contact</a></li>
+                </ul>
+                <ul>
+                    <li>Brands</li>
+                    <li><a href="https://hacksoft.io/" target="_blank">HackSoft</a></li>
+                    <li><a href="https://www.hackconf.bg/" target="_blank">HackConf</a></li>
+                </ul>
             </div>
-          </div>
-          <div class="regular">
-            <div>
-              Ако вие вече работите, но желаете<br/>
-              да придобриете или опресните<br/>
-              своите знания, курсът за вас ще<br/>
-              бъде на стойност<br/>
-              <b>600лв</b> (с вкл. ДДС).<br/>
+
+            <div class="rights">
+                <div class="rights-text">
+                    All rights reserved 2020 HackBulgaria<br>
+                    Powered by HackSoft
+                </div>
+                <img src="images/hackman.png" alt="HackMan">
             </div>
-          </div>
         </div>
-      </div>
-      <div class="course-lecturer">
-        <div class="heading">
-          Лектор:
-        </div>
-        <div class="content">
-          <div class="lecturer-container">
-            <div class="image">
-              <img src="images/lecturer.png" alt="Lecturer" />
-            </div>
-            <div class="description">
-              <div class="lecturer-name">
-                Мартин Ангелов
-              </div>
-              <div class="bio">
-                * Full-stack developer в HackSoft<br/>
-                * 3-годишен опит с езиците Python & JavaScript<br/>
-                * Завършил "Софтуерно инженерство" в Софийски университет<br/>
-                * Преподавател по Python 101 от 3 години в курсовете на HackBulgaria<br/>
-                * Лектор на EuroPython, DjangoCon Europe, Python Belgarde' meetup и<br/>
-                Django Bulgaria's meetups<br/>
-                * Ментор на Django Girls programming workshops<br/>
-                * Автор на блог статии за софтуерна разработка<br/>
-                * Горд представител на HackBulgaria алумни групата<br/>
-              </div>
-            </div>
-            <div class="right-side-placeholder">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="background-container-end">
-    </div>
-  </div>
-  <div class="partners" id="partners">
-    <div class="container">
-      <div class="heading">
-        Партньори:
-      </div>
-      <div class="content">
-        <div class="partner partner1">
-          <a href="https://www.hacksoft.io/" target="_blank">
-            <img src="images/hacksoft-logo.png" alt="HackSoft logo" />
-          </a>
-        </div>
-
-        <div class="partner partner2">
-          <a href="https://www.hedgeserv.com/" target="_blank">
-            <img src="images/hedgeserv-logo.png" alt="Hedge Serv logo" />
-          </a>
-        </div>
-
-        <!--<div class="partner partner3">
-          <div class="placeholder">
-            ? ? ?
-          </div>
-          <div class="coming-soon-text">
-            Coming soon
-          </div>
-        </div>-->
-      </div>
-    </div>
-  </div>
-
-  <div class="past-courses" id="past-courses">
-    <div class="container">
-      <div class="heading">
-        Минали курсове:
-      </div>
-      <div class="content">
-        <img src="images/past-courses.png" alt="Past courses statistics" />
-        <div class="past-courses-count">Проведени курсове:<br/> <div class="past-courses-count-number">33</div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="past-courses-feedback">
-    <div class="container">
-      <div class="heading">
-        Какво казват курсистите ни от предни издания?
-      </div>
-      <div class="content">
-        <img src="images/logo.png" alt="HackBulgaria logo" class="logo" />
-        <a href="https://www.facebook.com/pg/HackBulgaria/photos/?tab=album&album_id=987262321323200" target="_blank">
-          <img src="images/past-courses-feedback.png" alt="Past courses collage" class="collage" />
-        </a>
-        <div class="people-counter-container">
-          <img src="images/past-courses-feedback-left-image.png" alt="" class="past-courses-feedback-left-image" />
-          <div class="past-courses-counter-element">
-            <div>Преминали обучение:</div>
-            <div class="past-courses-counter">
-              <img src="images/past-courses-counter.png" alt="" />
-              <div class="past-courses-counter-text">700</div>
-            </div>
-          </div>
-          <img src="images/past-courses-feedback-right-image.png" alt="" class="past-courses-feedback-right-image" />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="about-us-section" id="about-us">
-    <div class="container">
-      <div class="heading">
-        За нас
-      </div>
-      <div class="content">
-        От 2014-та година, ние от HackBulgaria организираме практически курсове по програмиране, както за начинаещи така и за напреднали.<br/>
-<br/>
-Моделът ни на преподаване включва много практика, без да пропуска важната теория.<br/>
-<br/>
-Нашите курсове "Programming 101" целят да допълнят теоретичните знания и да дадат практически такива, с които всеки да започне своята първа работа като junior програмист.<br/>
-<br/>
-"Programming 101 with Python" е един от най-успешните ни курсове за момента, след който над 80% от завършилите стартират своята нова кариера като стажанти или junior програмисти.<br/>
-Тези курсове не са за напълно начинаещи. Те са подходящи за студенти, които имат теоретични знания и разбиране за програмирането.<br/>
-<br/>
-Организирали сме 15 такива обучения, благодарение на които 300 души са започнали своята първа работа след тях.<br/>
-<br/>
-<br/>
-Курсовете ни за напреднали обикновено се фокусират върху дадена технология и са насочени към хора, които имат опит в бранша.<br/>
-<br/>
-Повече за всички организирани от нас досега курсове можете да видите в  <a href="https://github.com/HackBulgaria" target="_blank">GitHub.</a><br/>
-<br/>
-<br/>
-Нашият екип е организатор на една от най-големите конференции за ИТ разработчици в страната и региона - <a href="https://www.hackconf.bg/en/" target="_blank">HackConf</a>.<br/>
-<br/>
-        Имате ли въпроси? Не се колебайте да ни пишете на имейл: <a href="mailto:team@backbulgaria.com">team@hackbulgaria.com</a> или в социалните ни канали:<br/>
-      </div>
-      <div class="social-networks">
-          <a href="https://www.facebook.com/HackBulgaria/" target="_blank"><img src="images/facebook-icon.png" alt="Facebook Logo" /></a>
-          <a href="https://www.instagram.com/hackbulgaria/" target="_blank"><img src="images/instagram-icon.png" alt="Instagram Logo" /></a>
-	            <a href="https://www.youtube.com/user/HackBulgaria" target="_blank"><img src="images/youtube-icon.png" alt="Youtube Logo" /></a>
-		    <a href="https://github.com/HackBulgaria/" target="_blank"><img src="images/github-icon.png" alt="Github Logo" /></a>
-		              <a href="https://twitter.com/hackbulgaria" target="_blank"><img src="images/twitter-icon.png" alt="Twitter Logo" /></a>
-      </div>
-    </div>
-  </div>
-
-  <div class="initiatives container">
-    <div class="heading">Къде можете да ни срещнете?</div>
-    <div class="content">
-      <a>
-	Курсове по програмиране <img src="images/hackman_fullheight.png">
-      </a>
-      <a href="https://www.hackconf.bg" target="_blank"> <img src="images/hackconf2020.png"></a>
-      <a href="https://www.facebook.com/groups/1101028213293596" target="_blank">
-	<img src="images/django_meetup.png">
-      </a>
-    </div>
-  </div>
-
-  <div class="ml-form-embed container newsletter-form"
-  data-account="946062:l6h0o8b3a3"
-  data-form="1771676:m6g0v7">
-</div>
-
-  <div class="footer">
-    <div class="container">
-      <div class="info">
-	<div class="heading">Информация</div>
-        <a href="mailto:team@hackbulgaria.com" target="_top">< контакти ></a>
-        <a href="https://drive.google.com/file/d/1ywY9NPyvj1W6eXQ9DI9PWxNue6wFirXT/view?usp=sharing" target="_blank">< условия ></a>
-        <a href="https://drive.google.com/file/d/12F5TMg3xqzx2RGZwVeHhCW2htarVpOhL/view?usp=sharing" target="_blank">< поверителност ></a>
-    </div>
-    <div class="powered-by">
-      <div class="heading">
-        С любезното съдействие на
-      </div>
-      <div class="content">
-        <a href="https://www.hacksoft.io/" target="_blank">
-          <img src="images/hacksoft-logo.png" alt="Hack Soft logo" />
-        </a>
-      </div>
-    </div>
-  </div>
-
+    </footer>
 </body>
-<!-- MailerLite Universal -->
-<script>
-(function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
-var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
-f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
-var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
-_.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
-
-var ml_account = ml('accounts', '946062', 'l6h0o8b3a3', 'load');
-</script>
-<!-- End MailerLite Universal -->
 </html>
